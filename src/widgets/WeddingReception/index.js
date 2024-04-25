@@ -1,4 +1,4 @@
-"use client"
+
 import React from 'react';
 import { pagedata } from '@/app/data'
 import WeddingreceptionCard from '@/components/WeddingreceptionCard'

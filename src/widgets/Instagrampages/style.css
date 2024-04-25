@@ -1,68 +1,13 @@
-@media (min-width: 768px) {
-  .containers {
-    position: relative;
-    /* gap: 20px; */
-   
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    transform-style: preserve-3d;
-    perspective: 400px;
-    margin: auto;
-  }
-  .containers .box {
-    position: relative;
-    width: 326px;
-    height: 326px;
-    /* background: #000; */
-    transition: 0.5s;
-    transform-style: preserve-3d;
-    overflow: hidden;
-    /* margin-right: 15px;
-    margin-top: 45px; */
-  }
-  .containers:hover .box {
-    transform: rotateY(25deg);
-  }
-  .containers .box:hover ~ .box {
-    transform: rotateY(-25deg);
-  }
-  .containers .box:hover {
-    transform: rotateY(0deg) scale(1);
-    z-index: 1;
-    box-shadow: 0 25px 40px rgba(0,0,0,0.5);
-  }
-  .containers .box .imgBx {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .containers .box .imgBx:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg,rgb(241, 188, 138),#6b6969);
-    z-index: 1;
-    opacity: 0;
-    transition: 0.5s;
-    mix-blend-mode: multiply;
-  }
-  .containers .box:hover .imgBx:before {
-    opacity: 1;
-  }
-  .containers .box .imgBx .instaImg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    
-  }
+.instaImage {
+
+	transition: .5s;
+	cursor: pointer;
+
 }
-  
+@media (min-width: 768px) {
+  .instaImage:hover {
+    -webkit-mask-position: 0 0;
+    -webkit-mask: linear-gradient(135deg,#000c 40%,#000,#000c 60%)
+    100% 100%/250% 250%;
+	  }
+  }

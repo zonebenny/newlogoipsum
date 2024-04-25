@@ -22,7 +22,7 @@ const Orchestrating = () => {
           });
           
           tl.fromTo(".workImg", {
-            yPercent: -0,
+            yPercent: -5,
             ease: 'none'
           }, {
             yPercent: 5,

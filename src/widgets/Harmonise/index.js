@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { pagedata } from '@/app/data';
 import Button from '@/components/Button';
@@ -22,10 +22,10 @@ const Harmonise = () => {
           });
           
           tl.fromTo(".harmoniseImg", {
-            yPercent: -10,
+            yPercent: -5,
             ease: 'none'
           }, {
-            yPercent: 10,
+            yPercent: 5,
             ease: 'none'
           });
       }, 

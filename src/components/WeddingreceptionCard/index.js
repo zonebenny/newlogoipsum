@@ -21,10 +21,10 @@ const WeddingreceptionCard = () => {
       });
       
       tl.fromTo(".recImg", {
-        yPercent: -10,
+        yPercent: -5,
         ease: 'none'
       }, {
-        yPercent: 10,
+        yPercent: 5,
         ease: 'none'
       });
   }, 

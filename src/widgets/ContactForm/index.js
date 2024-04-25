@@ -1,5 +1,5 @@
-"use client"
-import React, { useEffect } from 'react'
+
+import React from 'react'
 import { pagedata } from '@/app/data';
 import Image from 'next/image';
 import FormContact from '@/components/FormContact';
