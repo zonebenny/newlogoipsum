@@ -1,0 +1,136 @@
+/* .containerss {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+ 
+  }
+  
+  .containerss img {
+    position: absolute;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  
+  .courtine {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+  } */
+
+  /* .mask1 {
+    -webkit-mask-image: url(../../../public/heart.png);
+    mask-image: url(../../../public/heart.png);
+    -webkit-mask-size: 30%;
+    mask-size: 30%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    transform: translate(35%, 10%);
+  }
+  
+  .bannerImage img {
+    transform: translate(-35%, 0);
+    transition: transform 0.5s ease; 
+  }
+   */
+
+   /* .masks {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  
+
+    background-image: url(../../../public/bannerimages.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+
+    mask-image: url(../../../public/heart.png);
+    mask-size: 45%; 
+    mask-repeat: no-repeat; 
+    mask-position: center;
+    mask-position: calc(50% - 50vh); 
+    animation: scroll 10s linear infinite; 
+  }
+  
+  @keyframes scroll {
+    0% {
+      mask-position: calc(50% - 50vh);
+    }
+    100% {
+      mask-position: calc(50% + 50vh); 
+    }
+  } */
+  
+/* 
+  .masks {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-image: url(../../../public/bannerimages.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    mask-image: url(../../../public/lensmask.png);
+    mask-size: 50%; 
+    mask-repeat: no-repeat; 
+    mask-position: center;
+ 
+  
+} */
+
+/* .masks{ */
+  /* width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0; */
+  /* background-image: url(../../../public/bglens.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  /* z-index:9999; */
+  
+/* } */
+
+
+
+
+/* ******************************************************************* */
+/* #header-zoom {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.zoom {
+  position: relative;
+  margin: 0 auto;
+  width: 1920px;
+  height: 1000px;
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */
+
+    
+
+
+
+
+
+  
+ 

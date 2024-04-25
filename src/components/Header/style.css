@@ -1,0 +1,74 @@
+.activess {
+  background-color: #f9fafb;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+.menu-wrapper {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  width: 100%;
+  padding-bottom: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition:all 0.8s ease-in-out; 
+  height: 100vh;
+}
+
+.menu-wrapper.open {
+  max-height: 100vh
+}
+/* ******************** */
+
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+
+
+.btnsAnim {
+
+  animation: wiggle 2s linear infinite;
+  height: 3em;
+  width: 10em;
+  /* background: #444;
+  background: linear-gradient(top, #555, #333); */
+  border-radius: 10px;
+  border: 1px solid #f59c7e;
+  border-top: 5px solid #e08f74;
+  font-weight: 500;
+  /* color: #fff; */
+  /* font-size: 1em; */
+  transform-origin: 50% 5em;
+  transition: all 0.3s ease-in-out;
+}
+.btnsAnim:hover{
+  background-color: #f59c7e;
+  color: #fff;
+ 
+}
+

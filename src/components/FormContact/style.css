@@ -1,0 +1,47 @@
+
+  /* Keyframes */
+  @keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+  
+  
+  
+  .buttons {
+    animation: wiggle 2s linear infinite;
+    height: 3em;
+    width: 7em;
+    background: #444;
+    background: linear-gradient(top, #555, #333);
+    border: none;
+    border-top: 3px solid #f1774e;
+    border-radius: 0 0 0.4em 0.4em;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    transform-origin: 50% 5em;
+    transition: all 0.3s ease-in-out;
+  }
+  .buttons:hover{
+        background-color: #f1774e;
+        border-top: 5px solid #817f7f;
+  }

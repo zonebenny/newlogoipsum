@@ -1,0 +1,24 @@
+.btnPrimary{
+ background-color: transparent;
+ padding: 12px;
+ white-space: nowrap;
+ font-size: 14px;
+ width: 175px;
+ height: 45px;
+ font-weight: 600;
+}
+  
+.outline-primary{
+  border: 1px solid var(--custom-white);
+  border-radius: 20px;
+  color: var(--custom-white);
+}
+.outline-Secondary{
+   border: 1px solid var(--custom-black);
+   border-radius:20px;
+   color: var(--custom-black);
+}
+
+
+
+

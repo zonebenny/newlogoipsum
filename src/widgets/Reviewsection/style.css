@@ -1,0 +1,15 @@
+.swiper_review .swiper{
+    height: 100%;
+}
+.swiper_review .swiper-pagination{
+    text-align: justify;
+    bottom: 0 !important;
+}
+.swiper_review .swiper-pagination-bullet{
+    background-color: var(--custom-white);
+    outline: 1px solid black;
+    opacity:1;
+}
+.swiper_review .swiper-pagination-bullet-active{
+    background-color: var(--custom-black);
+}

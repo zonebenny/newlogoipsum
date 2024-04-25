@@ -1,0 +1,81 @@
+/* .blogImgs {
+
+    transform: perspective(400px)
+      rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
+    -webkit-mask: linear-gradient(135deg, #000c 40%, #000, #000c 60%) 100% 100%/250%
+      250%;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  
+  .blogImgs:hover {
+    --i: -1;
+    -webkit-mask-position: 0 0;
+  } */
+
+@media (min-width: 768px){
+
+    figure.sliderModel {
+     
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      margin: 10px;
+        height: 100%;
+      width: 100%;
+      color: #ffffff;
+     
+      background-color: #07090c;
+     
+      -webkit-perspective: 50em;
+      perspective: 50em;
+    }
+    figure.sliderModel * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all 0.6s ease;
+      transition: all 0.6s ease;
+    }
+    figure.sliderModel img {
+    
+      -webkit-transform-origin: 50% 100%;
+      -ms-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+    }
+    figure.sliderModel .blogContent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      -webkit-transform: rotateX(-90deg);
+      transform: rotateX(-90deg);
+      -webkit-transform-origin: 50% -50%;
+      -ms-transform-origin: 50% -50%;
+      transform-origin: 50% -50%;
+      z-index: 1;
+      opacity: 0;
+      padding: 20px 30px;
+    }
+    
+    
+    
+    figure.sliderModel:hover img,
+    figure.sliderModel.hover img {
+      -webkit-transform: rotateX(90deg);
+      transform: rotateX(90deg);
+      opacity: 0;
+    }
+    figure.sliderModel:hover .blogContent,
+    figure.sliderModel.hover .blogContent {
+      -webkit-transform: rotateX(0deg);
+      transform: rotateX(0deg);
+      opacity: 1;
+      -webkit-transition-delay: 0.2s;
+      transition-delay: 0.2s;
+    }
+}
+ 
+
+
+
+  

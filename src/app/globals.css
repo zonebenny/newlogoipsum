@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --custom-white:#ffffff;
+  --custom-black:#000000;
+  --custom-counter-color:#e75f31;
+  --custom-hover-lightorange:#ee9172;
+  --custom-beige-color:#F9F2EC;
+  --custom-wheat-color:#7069740F;
+  --custom-darkgrey-color:#433F46;
+  --custom-footer-bgcolor: ##433F45;
+  --custom-counter-textcolor:#363636;
+  --custom-line-bgcolor:#2D1615;
+  --custom-hover-transperant:linear-gradient(180deg, rgba(255,255,255,0.14609593837535018) 22%, rgba(0,0,0,1) 100%);
+  --custom-card-hover-transperant:  linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+  --custom-black-transperant:#00000052;
+
+
+  --custom-gradient:radial-gradient(circle, rgba(60,54,51,0.989233193277311) 0%, rgba(52,47,44,1) 90%);
+  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f5784e;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+*{
+  scroll-behavior: smooth;
+}
+
+
+
+
+/************************* hover-start **************************/
+/* .btns{
+  position:relative;
+  border: 1px solid transparent;
+  transition:.3s ease-in-out;
+  overflow: hidden;
+}
+.btns:before{
+  content:'';
+  position:absolute;
+  width:100%;
+  left:0;
+  top: 0;
+  height:0%;
+  background:#d98366;
+  transition:.3s;
+  z-index:-1;
+
+  
+}
+.btns:hover{
+  color:#fff;
+
+  border: 1px solid #d98366;
+  z-index: 9;
+}
+.btns:hover:before{
+  height:100%;
+ 
+} */
+
+ .btns {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #000; 
+  border: 1px solid transparent; 
+  transition: color 0.3s, border-color 0.3s, box-shadow 0.3s; 
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btns:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: width 0.4s ease-in-out;
+  background-color: #e8987d; 
+
+}
+
+.btns:hover {
+  border: 1px solid #e8987d;
+  color: #ffffff;
+}
+
+.btns:hover::before {
+  width: 100%; 
+} 
+
+
+
+/************************** hover-end ***************************/
+
+
+/*********************** Underline Styles start ***********************/
+
+.custom-underline {
+  position: relative;
+}
+
+.custom-underline::after {
+  content: "";
+  position: absolute;
+  top: 95%;
+  left: 0%;
+  height: 3px;
+  width: 0%;
+  background-color: var(--custom-counter-color);
+  transition: 0.3s ease-in-out;
+}
+
+.UnderLine {
+  width: max-content;
+}
+
+.UnderLine:hover .custom-underline::after {
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+.UnderLinemove{
+  width: max-content;
+}
+
+.custom-underline.active::after {
+  width: 100%;
+  transition: 5s ease all;
+}
+
+/*********************** Underline Styles end ***********************/
+
+/* *********************************** */
+
+
+/* ************************************ */
+
+
