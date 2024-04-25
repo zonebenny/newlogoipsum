@@ -49,7 +49,7 @@ const Menulinks = () => {
       </ul>
 
             <div className="p-3 2xl:p-0">
-              <Button variant={'btnPrimary'} outline={'outline-Secondary'} name="ENQUIRE NOW"  className="btnsAnim"/>
+              <Button variant={'btnPrimary'} outline={'outline-Secondary'} name="ENQUIRE NOW" />
             </div>
 
 

@@ -16,8 +16,8 @@ const WeddingReception = () => {
           <div className='flex justify-center mb-[30px] linewrap'>
             <span className='w-[2px] h-12 bg-custom-line-bgcolor block opacity-50'></span>
           </div>
-          <span className='wedTitleWrap text-lg text-custom-black text-center font-normal leading-5 mb-5 block'>{pagedata?.weddingreception?.title}</span>
-          <h3 className='wedSubtitleWrap font-cormorantFont text-4xl 2xl:text-[50px] text-center font-normal leading-[38px] 2xl:leading-[60px]'>{pagedata?.weddingreception?.subtitle}</h3>
+          <span className='wedTitleWrap  text-lg text-custom-black text-center font-normal leading-5 mb-5 block'>{pagedata?.weddingreception?.title}</span>
+          <h3 className='wedSubtitleWrap font-cormorantFont text-[30px] 2xl:text-[50px] text-center font-normal leading-[38px] 2xl:leading-[60px]'>{pagedata?.weddingreception?.subtitle}</h3>
         </div>
         <WeddingreceptionCard></WeddingreceptionCard>
       </div>

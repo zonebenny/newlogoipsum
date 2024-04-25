@@ -10,8 +10,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Orchestrating = () => {
     useEffect(() => {
-  
-        const tl = gsap.timeline({
+        // Check if the screen width is greater than a certain threshold (e.g., 768px)
+        if (window.innerWidth > 768) {
+          const tl = gsap.timeline({
             scrollTrigger: {
               scrub: true,
               trigger: ".workimgBlock",
@@ -20,17 +21,21 @@ const Orchestrating = () => {
               once: true,
             },
           });
-          
-          tl.fromTo(".workImg", {
-            yPercent: -5,
-            ease: 'none'
-          }, {
-            yPercent: 5,
-            ease: 'none'
-          });
-      }, 
-    
-      []);
+      
+          tl.fromTo(
+            ".workImg",
+            {
+              yPercent: -5,
+              ease: 'none'
+            },
+            {
+              yPercent: 5,
+              ease: 'none'
+            }
+          );
+        }
+      }, []);
+      
 
     return (
         <section className="py-[50px] 2xl:py-[120px]">
@@ -48,12 +53,12 @@ const Orchestrating = () => {
                                 <Image className="group-hover:scale-105 transition-all duration-1000 ease-in-out workImg scale-[1.2]" src={ele?.image} fill alt={ele?.alt}/>
                             </figure>
                           
-                            <div className="absolute bottom-4 left-3 lg:left-14 mt-3 mx-auto mb-6 block h-[85%] sm:h-[46%] lg:h-[23%] z-10 ">
+                            <div className="absolute bottom-4 left-3 lg:left-14 mt-3 mx-auto mb-6 block h-[77%]  lg:h-[23%] z-10 ">
                                 <div className="card-title mt-[72px] mx-0 h-[21%] lg:h-[79%] w-full transition-all duration-700">
                                     <span className="font-cormorantFont max-w-[200px] text-custom-white text-3xl md:text-[40px] 2xl:text-[50px] md:leading-[40px] 2xl:leading-[50px] font-normal block mb-5 ">{ele?.title}</span>
                                 </div>
                                 <div className=" w-full lg:max-w-[400px]">
-                                    <p className="text-custom-white text-xl leading-6 font-light mb-4">{ele?.discription}</p>
+                                    <p className="text-custom-white text-base lg:text-xl  leading-6 font-light mb-4">{ele?.discription}</p>
                                     <Button
                                         href={ele?.about_us_btn?.url}
                                         variant="btnPrimary"

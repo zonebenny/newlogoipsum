@@ -22,7 +22,7 @@
 .figure-wrapper:hover .card-title {
     margin-top: -100px;
 }
-}
+
 
 
 .hoverBg::after {
@@ -50,7 +50,7 @@
 .bgColorWrap:not(:hover) .hoverBg::before {
     opacity: 0; 
 }
-
+}
 
 
   

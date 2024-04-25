@@ -12,54 +12,58 @@
     --i: -1;
     -webkit-mask-position: 0 0;
   } */
-
-@media (min-width: 768px){
-
-    figure.sliderModel {
-     
-      color: #fff;
-      position: relative;
-      overflow: hidden;
-      margin: 10px;
-        height: 100%;
-      width: 100%;
-      color: #ffffff;
-     
-      background-color: #07090c;
-     
-      -webkit-perspective: 50em;
-      perspective: 50em;
-    }
-    figure.sliderModel * {
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      -webkit-transition: all 0.6s ease;
-      transition: all 0.6s ease;
-    }
-    figure.sliderModel img {
+@media (max-width:575px){
+  figure.sliderModel{
+    width:95% !important;
+  }
+}
+  
+  figure.sliderModel {
     
-      -webkit-transform-origin: 50% 100%;
-      -ms-transform-origin: 50% 100%;
-      transform-origin: 50% 100%;
-    }
-    figure.sliderModel .blogContent {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      -webkit-transform: rotateX(-90deg);
-      transform: rotateX(-90deg);
-      -webkit-transform-origin: 50% -50%;
-      -ms-transform-origin: 50% -50%;
-      transform-origin: 50% -50%;
-      z-index: 1;
-      opacity: 0;
-      padding: 20px 30px;
-    }
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
     
+    background-color: #07090c;
     
+    -webkit-perspective: 50em;
+    perspective: 50em;
+  }
+  figure.sliderModel * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+  }
+  figure.sliderModel img {
     
-    figure.sliderModel:hover img,
+    -webkit-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+  }
+  figure.sliderModel .blogContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    -webkit-transform-origin: 50% -50%;
+    -ms-transform-origin: 50% -50%;
+    transform-origin: 50% -50%;
+    z-index: 1;
+    opacity: 0;
+    padding: 20px 30px;
+  }
+  
+  
+  
+  /* @media (min-width: 768px){ */
+  figure.sliderModel:hover img,
     figure.sliderModel.hover img {
       -webkit-transform: rotateX(90deg);
       transform: rotateX(90deg);
@@ -78,7 +82,7 @@
 
 
 
-}
+/* } */
  
 
 

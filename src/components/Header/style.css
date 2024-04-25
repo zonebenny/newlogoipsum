@@ -23,8 +23,7 @@
 }
 /* ******************** */
 
-/* Keyframes */
-@keyframes wiggle {
+/* @keyframes wiggle {
   0%, 7% {
     transform: rotateZ(0);
   }
@@ -55,14 +54,12 @@
   animation: wiggle 2s linear infinite;
   height: 3em;
   width: 10em;
-  /* background: #444;
-  background: linear-gradient(top, #555, #333); */
+
   border-radius: 10px;
   border: 1px solid #f59c7e;
   border-top: 5px solid #e08f74;
   font-weight: 500;
-  /* color: #fff; */
-  /* font-size: 1em; */
+/
   transform-origin: 50% 5em;
   transition: all 0.3s ease-in-out;
 }
@@ -70,5 +67,5 @@
   background-color: #f59c7e;
   color: #fff;
  
-}
+} */
 

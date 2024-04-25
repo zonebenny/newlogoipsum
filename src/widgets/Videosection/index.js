@@ -11,41 +11,46 @@ const Videosection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const togglePlayPause = () => {
-    const video = videoRef.current;
-    if (video.paused) {
-      video.play();
-      setIsPlaying(true);
-    } else {
-      video.pause();
-      setIsPlaying(false);
+    if (window.innerWidth <= 1024) { // Adjust the threshold as needed
+      const video = videoRef.current;
+      if (video.paused) {
+        video.play();
+        setIsPlaying(true);
+      } else {
+        video.pause();
+        setIsPlaying(false);
+      }
     }
   };
-
   useEffect(() => {
-    const growTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#grow",
-        scrub: 1.5,
-        start: "top bottom",
-        end: "+=400",
-        once:true,
-        onEnter: () => {
-          const video = videoRef.current;
-          video.play();
-          setIsPlaying(true);
-        },
-        onLeaveBack: () => {
-          const video = videoRef.current;
-          video.pause();
-          setIsPlaying(false);
+    // Check if screen width is greater than 768px (example threshold)
+    const screenWidth = window.innerWidth;
+    if (screenWidth > 1024) {
+      const growTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#grow",
+          scrub: 1.5,
+          start: "top bottom",
+          end: "+=400",
+          once:true,
+          onEnter: () => {
+            const video = videoRef.current;
+            video.play();
+            setIsPlaying(true);
+          },
+          onLeaveBack: () => {
+            const video = videoRef.current;
+            video.pause();
+            setIsPlaying(false);
+          }
         }
-      }
-    });
+      });
 
-    growTl.to("#grow", {
-      duration: 1,
-      scale: 1.16,
-    });
+      growTl.to("#grow", {
+        duration: 1,
+        scale: 1.16,
+      });
+    }
   }, []);
 
   return (
@@ -58,7 +63,7 @@ const Videosection = () => {
           muted
           alt="Wedding Video"
           id="grow"
-          className="absolute top-0 left-0 w-full h-full cursor-pointer rounded-lg scale-75"
+          className="absolute top-0 left-0 w-full h-full cursor-pointer xl:rounded-lg xl:scale-75"
           onClick={togglePlayPause}
         ></video>
         <button onClick={togglePlayPause} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" aria-label={isPlaying ? 'Pause' : 'Play'}>
@@ -74,6 +79,7 @@ const Videosection = () => {
 };
 
 export default Videosection;
+
 
 
 

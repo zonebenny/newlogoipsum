@@ -44,7 +44,7 @@ const ContactForm = () => {
             
           </div>
           <div id="contactForm" className='max-w-[675px]'>
-            <h3 className='text-2xl 2xl:text-[50px] font-cormorantFont font leading-8 2xl:leading-[50px] text-custom-black max-w-[491px] mb-8 2xl:mb-[90px]'>{pagedata?.formdatasection?.title}</h3>
+            <h3 className='text-3xl 2xl:text-[50px] font-cormorantFont font leading-8 2xl:leading-[50px] text-custom-black max-w-[491px] mb-8 2xl:mb-[90px]'>{pagedata?.formdatasection?.title}</h3>
               <FormContact></FormContact>
           </div>
         </div>

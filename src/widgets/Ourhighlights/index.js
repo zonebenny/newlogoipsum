@@ -58,7 +58,7 @@ const Ourhighlights = () => {
         </div>
 
 
-        <div id="default-tab-content" className="max-w-[300px] xl:max-w-[674px] w-full">
+        <div id="default-tab-content" className="md:max-w-[300px] xl:max-w-[674px] w-full">
           {pagedata?.ourhighlight?.tabs?.map((tab) => (
             <figure
               className={`${activeTab === tab.id ? "block" : "hidden"} relative pb-[100%]`}
