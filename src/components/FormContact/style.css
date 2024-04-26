@@ -27,7 +27,7 @@
   
   
   .buttons {
-    animation: wiggle 2s linear infinite;
+   
     height: 3em;
     width: 7em;
     background: #444;
@@ -44,4 +44,5 @@
   .buttons:hover{
         background-color: #f1774e;
         border-top: 5px solid #817f7f;
+        animation: wiggle 2s linear infinite;
   }
