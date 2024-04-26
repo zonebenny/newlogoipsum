@@ -25,7 +25,7 @@ const Videosection = () => {
   useEffect(() => {
     // Check if screen width is greater than 768px (example threshold)
     const screenWidth = window.innerWidth;
-    if (screenWidth > 1024) {
+    if (screenWidth > 1500) {
       const growTl = gsap.timeline({
         scrollTrigger: {
           trigger: "#grow",

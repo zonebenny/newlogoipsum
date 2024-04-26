@@ -1,59 +1,51 @@
-
-import React from 'react'
+"use client"
+import React, { useState } from 'react';
 import { pagedata } from '@/app/data';
 import Image from 'next/image';
 import FormContact from '@/components/FormContact';
-// import gsap from 'gsap';
-// import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-import "./style.css"
-// gsap.registerPlugin(ScrollTrigger);
+import './style.css';
 
 const ContactForm = () => {
-  // useEffect(() => {
-  
-  //   const tl = gsap.timeline({
-  //       scrollTrigger: {
-  //         scrub: 3,
-  //         trigger: ".formimgBlock",
-  //         start: "top center",
-  //         end: "bottom 60%",
-  //         once: true,
-  //       },
-  //     });
-      
-  //     tl.fromTo(".formImg", {
-  //       yPercent: -10,
-  //       ease: 'none'
-  //     }, {
-  //       yPercent: 10,
-  //       ease: 'none'
-  //     });
-  // }, 
+  const [contentVisible, setContentVisible] = useState(false);
 
-  // []);
-  
+  const toggleContent = () => {
+    setContentVisible(!contentVisible);
+  };
+
   return (
-    <section className='py-[50px] 2xl:py-[150px]'>
+    <section className='py-[50px] 2xl:py-[150px] relative'>
       <div className='container'>
         <div className='flex flex-wrap xl:flex-nowrap gap-[50px] xl:gap-[112px] justify-center'>
-          <div className='lg:max-w-[578px] w-full  rounded-lg wrap-image' >
-         
-            <figure className='relative pb-[131.198%]  '>
-              <Image src='/contactimg.png' className='  formImg' alt="contactimg" fill />
+          <div className='lg:max-w-[578px] w-full  rounded-lg wrap-image'>
+            <figure className='relative pb-[131.198%]'>
+              <Image src='/contactimg.png' className='formImg' alt='contactimg' fill />
             </figure>
-            
           </div>
-          <div id="contactForm" className='max-w-[675px]'>
-            <h3 className='text-3xl 2xl:text-[50px] font-cormorantFont font leading-8 2xl:leading-[50px] text-custom-black max-w-[491px] mb-8 2xl:mb-[90px]'>{pagedata?.formdatasection?.title}</h3>
-              <FormContact></FormContact>
+          <div id='contactForm' className='max-w-[675px]'>
+            <h3 className='text-3xl 2xl:text-[50px] font-cormorantFont font leading-8 2xl:leading-[50px] text-custom-black max-w-[491px] mb-8 2xl:mb-[90px]'>
+              {pagedata?.formdatasection?.title}
+            </h3>
+            <FormContact />
           </div>
         </div>
+      </div>
+      <div className='relative hidden 2xl:block'>
+      <div className='avatarImg ' onClick={toggleContent}>
+        <Image src='/avatar.png' width={240} height={240} alt='avar' />
+      {contentVisible && (
+        <div className='contentBox flex justify-center items-center rounded-xl speech-bubble'>
+          <p className='text-2xl text-custom-line-bgcolor font-bold italic  '>How are you?</p>
+        </div>
+      )}
+      </div>
+
       </div>
     </section>
   );
 };
 
 export default ContactForm;
+
 
 
 // "use client"
