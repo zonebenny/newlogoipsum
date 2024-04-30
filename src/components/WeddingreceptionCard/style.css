@@ -1,0 +1,14 @@
+.recImg {
+
+	transition: .5s;
+	cursor: pointer;
+
+}
+@media (min-width: 768px) {
+  .recImg:hover {
+    -webkit-mask-position: 0 0;
+    -webkit-mask: linear-gradient(135deg,#000c 40%,#000,#000c 60%)
+    100% 100%/250% 250%;
+	  }
+  }
+ 

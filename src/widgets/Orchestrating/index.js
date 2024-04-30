@@ -12,33 +12,37 @@ const Orchestrating = () => {
     useEffect(() => {
         // Check if the screen width is greater than a certain threshold (e.g., 768px)
         if (window.innerWidth > 768) {
-          const tl = gsap.timeline({
-            scrollTrigger: {
-              scrub: true,
-              trigger: ".workimgBlock",
-              start: "top center",
-              end: "bottom 60%",
-              once: true,
-            },
-          });
+        
+            gsap.set([".celebWrap"], {
+              x: -50,
+              opacity: 0
+            });
+                
+            gsap.to(".celebWrap", {
+              // duration: 1,
+              delay: 0.3,
+              x: 0,
+              opacity: 1,
+              stagger: {
+                each:0.3,
+                // amount: 0.1,
+                from: "start" 
+              },
+              scrollTrigger: {
+                trigger: ".orchestringWrappeer", 
+                start: "top bottom", 
+                end: "bottom "
+              }
+            });
+            
       
-          tl.fromTo(
-            ".workImg",
-            {
-              yPercent: -5,
-              ease: 'none'
-            },
-            {
-              yPercent: 5,
-              ease: 'none'
-            }
-          );
+         
         }
       }, []);
       
 
     return (
-        <section className="py-[50px] 2xl:py-[120px]">
+        <section className="py-[50px] 2xl:py-[120px] orchestringWrappeer">
             <div className="container">
                 <div className="sm:px-[120px] lg:px-[175px] mb-[40px] 2xl:mb-[90px]">
                     <h3 className="font-cormorantFont text-custom-black text-3xl md:text-4xl 2xl:text-[50px] leading-[35px] 2xl:leading-[60px] font-normal text-center ">
@@ -47,10 +51,10 @@ const Orchestrating = () => {
                 </div>
                 <div className="flex flex-wrap gap-[50px] justify-center xl:justify-start ">
                     {pagedata?.orchestrating?.subcontent?.map((ele, index) => (
-                        <div key={index} className="relative overflow-hidden max-w-[657px] group w-full rounded-lg figure-wrapper group transition-all duration-1000 ease-in-out  bgColorWrap cursor-pointer  workimgBlock">
+                        <div key={index} className="relative overflow-hidden max-w-[657px] group w-full rounded-lg figure-wrapper group transition-all duration-1000 ease-in-out  bgColorWrap cursor-pointer  workimgBlock celebWrap">
                            <div className="hoverBg">
                             <figure className="pb-[104.72%]">
-                                <Image className="group-hover:scale-105 transition-all duration-1000 ease-in-out workImg scale-[1.2]" src={ele?.image} fill alt={ele?.alt}/>
+                                <Image className="group-hover:scale-105 transition-all duration-1000 ease-in-out workImg " src={ele?.image} fill alt={ele?.alt}/>
                             </figure>
                           
                             <div className="absolute bottom-4 left-3 lg:left-14 mt-3 mx-auto mb-6 block h-[77%]  lg:h-[23%] z-10 ">

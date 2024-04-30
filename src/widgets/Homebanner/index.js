@@ -146,6 +146,32 @@ gsap.registerPlugin(ScrollTrigger);
 import "./style.css"
 
 const Homebanner = () => {
+
+
+  useEffect(() => {
+  
+    const tl = gsap.timeline({
+        scrollTrigger: {
+          scrub: 3,
+          trigger: ".bannerWrapper",
+          start: "top center",
+          end: "bottom 60%",
+          // once: true,
+          
+        },
+      });
+      
+      tl.fromTo(".bannerImg", {
+        y: -50,
+        ease: 'none'
+      }, {
+        y: 50,
+        ease: 'none',
+        duration:1
+      });
+  }, 
+
+  []);
   // useEffect(() => {
 
   //   const tl = gsap.timeline({

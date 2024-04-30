@@ -13,20 +13,45 @@ const Harmonise = () => {
   
         const tl = gsap.timeline({
             scrollTrigger: {
-              scrub: 3,
+            //   scrub: 3,
               trigger: ".harmoniseImgBlock",
               start: "top center",
-              end: "bottom 60%",
-              once: true,
+              end: "bottom ",
+              scrub:3
+            //   once: true,
+              
             },
           });
           
           tl.fromTo(".harmoniseImg", {
-            yPercent: -5,
+            y: -30,
             ease: 'none'
           }, {
-            yPercent: 5,
-            ease: 'none'
+            y: 30,
+            ease: 'none',
+            duration:1
+          });
+
+          gsap.set(".harmoniseTitle", {
+            x: -50, 
+            opacity: 0
+          });
+        
+          gsap.to(".harmoniseTitle", {
+            duration: 1,
+            delay: 1,
+            x: 0,
+            opacity: 1,
+            stagger: {
+              amount: 0.1,
+              from: "start" 
+            },
+            scrollTrigger: {
+              trigger: ".harmonisewrap", 
+              start: "top bottom", 
+              end: "bottom top", 
+          
+            }
           });
       }, 
     
@@ -43,8 +68,11 @@ const Harmonise = () => {
                         </figure>
                     </div>
                     <div className=' flex flex-col justify-center pt-8 lg:pt-0 '>
-                        <h2  className='text-3xl md:text-4xl  xl:text-[59px] font-cormorantFont font-normal  xl:leading-[60px] text-custom-black pb-[20px] 2xl:pb-[50px]'>{pagedata?.harmonisearea?.title}</h2>
+                        <h2  className='text-3xl md:text-4xl  xl:text-[59px] font-cormorantFont font-normal  xl:leading-[60px] text-custom-black pb-[20px] 2xl:pb-[50px] harmoniseTitle'>{pagedata?.harmonisearea?.title}</h2>
+                        <div className='harmoniseTitle'>
+
                         <Button href={pagedata?.harmonisearea?.about_us_btn?.url} variant="btnPrimary" outline="outline-Secondary" name={pagedata?.harmonisearea?.about_us_btn?.text} />
+                        </div>
                         <div className='flex flex-wrap 2xl:flex-nowrap gap-5 2xl:gap-0 md:justify-evenly 2xl:justify-between pt-[20px] 2xl:pt-[80px]'>
                             {pagedata?.harmonisearea?.content?.map((item, index) => (
                                 <div key={index} className='py-6'>

@@ -1,28 +1,72 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { pagedata } from '@/app/data';
 import Image from 'next/image';
 import FormContact from '@/components/FormContact';
 import './style.css';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const ContactForm = () => {
   const [contentVisible, setContentVisible] = useState(false);
 
   const toggleContent = () => {
     setContentVisible(!contentVisible);
+
   };
 
+  useEffect(() => {
+    gsap.set([".formImg", ".formTitle"], {
+      x: -50,
+      opacity: 0
+    });
+        
+    gsap.to(".formImg", {
+      duration: 1,
+      delay: 0.5,
+      x: 0,
+      opacity: 1,
+      stagger: {
+        amount: 0.1,
+        from: "start" 
+      },
+      scrollTrigger: {
+        trigger: ".contactWrapper", 
+        start: "top bottom", 
+        end: "bottom top"
+      }
+    });
+    
+    gsap.to(".formTitle", {
+      duration: 1,
+      delay: 1.5,
+      x: 0,
+      opacity: 1,
+      stagger: {
+        amount: 0.1,
+        from: "start" 
+      },
+      scrollTrigger: {
+        trigger: ".contactWrapper", 
+        start: "top bottom", 
+        end: "bottom "
+      }
+    });
+  }, []);
+  
+
   return (
-    <section className='py-[50px] 2xl:py-[150px] relative'>
+    <section className='py-[50px] 2xl:py-[150px] relative contactWrapper'>
       <div className='container'>
         <div className='flex flex-wrap xl:flex-nowrap gap-[50px] xl:gap-[112px] justify-center'>
           <div className='lg:max-w-[578px] w-full  rounded-lg wrap-image'>
             <figure className='relative pb-[131.198%]'>
-              <Image src='/contactimg.png' className='formImg' alt='contactimg' fill />
+              <Image src='/contactimg.png' className='formImg ' alt='contactimg' fill />
             </figure>
           </div>
           <div id='contactForm' className='max-w-[675px]'>
-            <h3 className='text-3xl 2xl:text-[50px] font-cormorantFont font leading-8 2xl:leading-[50px] text-custom-black max-w-[491px] mb-8 2xl:mb-[90px]'>
+            <h3 className='text-3xl 2xl:text-[50px] font-cormorantFont font leading-8 2xl:leading-[50px] text-custom-black max-w-[491px] mb-8 2xl:mb-[90px] formTitle'>
               {pagedata?.formdatasection?.title}
             </h3>
             <FormContact />

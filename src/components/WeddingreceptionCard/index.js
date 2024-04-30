@@ -5,6 +5,7 @@ import { pagedata } from '@/app/data'
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
+import "./style.css"
 
 const WeddingreceptionCard = () => {
 
@@ -16,16 +17,18 @@ const WeddingreceptionCard = () => {
           trigger: ".weddingRecWrap",
           start: "top center",
           end: "bottom 60%",
-          once: true,
+          // once: true,
+          
         },
       });
       
       tl.fromTo(".recImg", {
-        yPercent: -5,
+        y: -30,
         ease: 'none'
       }, {
-        yPercent: 5,
-        ease: 'none'
+        y: 30,
+        ease: 'none',
+        duration:1
       });
   }, 
 
