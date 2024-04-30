@@ -19,7 +19,7 @@ export default function Home() {
       {/* <BannerWord></BannerWord> */}
       {/* <Homebansample></Homebansample> */}
       <Homebanner></Homebanner>
-      <Harmonise></Harmonise>
+      {/* <Harmonise></Harmonise>
       <WeddingReception></WeddingReception>
       <Orchestrating></Orchestrating>
       <Videosection></Videosection>
@@ -28,7 +28,7 @@ export default function Home() {
       <Awardsection></Awardsection>
       <Ourblog></Ourblog>
       <Instagrampages></Instagrampages>
-      <ContactForm></ContactForm>
+      <ContactForm></ContactForm> */}
     </main>
   );
 }
