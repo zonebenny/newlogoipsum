@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useRef, useState } from 'react';
+import {  useLayoutEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -11,7 +11,7 @@ const Videosection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const togglePlayPause = () => {
-    if (window.innerWidth <= 1024) { // Adjust the threshold as needed
+    if (window.innerWidth <= 1024) { 
       const video = videoRef.current;
       if (video.paused) {
         video.play();
@@ -22,8 +22,8 @@ const Videosection = () => {
       }
     }
   };
-  useEffect(() => {
-    // Check if screen width is greater than 768px (example threshold)
+  useLayoutEffect(() => {
+   
     const screenWidth = window.innerWidth;
     if (screenWidth > 1500) {
       const growTl = gsap.timeline({

@@ -1,6 +1,6 @@
 "use client";
 import { pagedata } from '@/app/data';
-import React, { useEffect } from 'react';
+import React, {  useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Image from 'next/image';
@@ -9,7 +9,7 @@ import "./style.css"
 
 
 const AchivementSection = () => {
-  useEffect(() => {
+  useLayoutEffect(() => {
  
       gsap.fromTo(
         ".cardWrap:not(:first-child)",

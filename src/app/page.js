@@ -16,8 +16,7 @@ import WeddingReception from "@/widgets/WeddingReception";
 export default function Home() {
   return (
     <main>
-      {/* <BannerWord></BannerWord> */}
-      {/* <Homebansample></Homebansample> */}
+ 
       <Homebanner></Homebanner>
       <Harmonise></Harmonise>
       <WeddingReception></WeddingReception>

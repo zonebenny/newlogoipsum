@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, {  useLayoutEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import gsap from 'gsap'
@@ -12,7 +12,7 @@ import { pagedata } from '@/app/data'
 
 
 const Instagrampages = () => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.set(".instaImg", {
       x: -50,
       opacity: 0
@@ -39,53 +39,7 @@ const Instagrampages = () => {
   }, []);
   
 
-  // useEffect(() => {
-  //   gsap.set(".instaImg", {
-  //     x: -100,
-  //     opacity: 0
-  //   });
-  
-  //   gsap.to(".instaImg", {
-  //     duration: 1,
-  //     delay: 0.5,
-  //     x: 0,
-  //     opacity: 1,
-  //     stagger: {
-  //       amount: 0.1,
-  //       from: "start" 
-  //     }
-  //   });
-  // }, []);
-  
 
-//   useEffect(() => {
- 
-//     gsap.fromTo(
-//       ".instaWrap:not(:first-child)",
-//       {
-//         x: () => window.innerWidth / 2 + 600,
-      
-//       },
-//       {
-//         x: 0,
-//         stagger: 0.1,
-       
-//         duration: 0.1,
-//         ease: "power2.out",
-       
-//         scrollTrigger: {
-//           trigger: ".instaPage", 
-//           // scrub: true,
-//           start: "top center",
-//           end: "top top",
-//           once:true
-         
-//         }
-//       }
-//     );
-//   }
-
-// , []); 
 
   return (
     <section className='bg-custom-beige-color py-[50px] 2xl:py-[150px] instaPage'>

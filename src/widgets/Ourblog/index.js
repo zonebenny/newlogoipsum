@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, {  useLayoutEffect } from 'react'
 import { pagedata } from '@/app/data'
 import Button from '@/components/Button'
 import OurblogCard from '@/components/OurblogCard'
@@ -9,7 +9,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Ourblog = () => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.set(".blogImgWrap", {
       x: -50,
       opacity: 0

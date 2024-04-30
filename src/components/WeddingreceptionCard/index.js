@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, {  useLayoutEffect } from 'react'
 import Image from 'next/image'
 import { pagedata } from '@/app/data'
 import gsap from 'gsap';
@@ -9,7 +9,7 @@ import "./style.css"
 
 const WeddingreceptionCard = () => {
 
-  useEffect(() => {
+  useLayoutEffect(() => {
   
     const tl = gsap.timeline({
         scrollTrigger: {

@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from "react";
+import React, {  useLayoutEffect } from "react";
 import Image from "next/image";
 import { pagedata } from "@/app/data";
 import Button from "@/components/Button";
@@ -9,7 +9,7 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const Orchestrating = () => {
-    useEffect(() => {
+    useLayoutEffect(() => {
         // Check if the screen width is greater than a certain threshold (e.g., 768px)
         if (window.innerWidth > 768) {
         

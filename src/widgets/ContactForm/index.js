@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import { pagedata } from '@/app/data';
 import Image from 'next/image';
 import FormContact from '@/components/FormContact';
@@ -16,7 +16,7 @@ const ContactForm = () => {
 
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.set([".formImg", ".formTitle"], {
       x: -50,
       opacity: 0

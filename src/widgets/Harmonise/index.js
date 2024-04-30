@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from 'react';
+import React, {  useLayoutEffect } from 'react';
 import Image from 'next/image';
 import { pagedata } from '@/app/data';
 import Button from '@/components/Button';
@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 import "./style.css";
 
 const Harmonise = () => {
-    useEffect(() => {
+  useLayoutEffect(() => {
   
         const tl = gsap.timeline({
             scrollTrigger: {
