@@ -39,17 +39,17 @@ const Harmonise = () => {
         
           gsap.to(".harmoniseTitle", {
             duration: 1,
-            delay: 1,
+            delay: 0.2,
             x: 0,
             opacity: 1,
             stagger: {
-              amount: 0.1,
+              // amount: 0.1,
               from: "start" 
             },
             scrollTrigger: {
               trigger: ".harmonisewrap", 
               start: "top bottom", 
-              end: "bottom top", 
+              end: "+=500", 
           
             }
           });

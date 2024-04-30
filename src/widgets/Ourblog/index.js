@@ -16,8 +16,8 @@ const Ourblog = () => {
     });
   
     gsap.to(".blogImgWrap", {
-      duration: 1,
-      delay: 1,
+      duration: 0.3,
+      // delay: 1,
       x: 0,
       opacity: 1,
       stagger: {
@@ -27,8 +27,8 @@ const Ourblog = () => {
       },
       scrollTrigger: {
         trigger: ".blogWrap", 
-        start: "top bottom", 
-        end: "bottom top", 
+        start: "top 80%", 
+        end: "bottom 20%", 
     
       }
     });
@@ -38,8 +38,8 @@ const Ourblog = () => {
     });
   
     gsap.to(".blogTitle", {
-      duration: 1,
-      delay: 0.5,
+      duration: 0.3,
+      // delay: 0.5,
       x: 0,
       opacity: 1,
       stagger: {
@@ -48,8 +48,10 @@ const Ourblog = () => {
       },
       scrollTrigger: {
         trigger: ".blogWrap", 
-        start: "top bottom", 
-        end: "bottom top", 
+        // start: "top bottom", 
+        // end: "bottom bottom", 
+        start: "top 80%", 
+        end: "bottom 20%", 
     
       }
     });

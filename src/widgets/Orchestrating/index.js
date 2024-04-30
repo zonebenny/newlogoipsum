@@ -19,19 +19,20 @@ const Orchestrating = () => {
             });
                 
             gsap.to(".celebWrap", {
-              // duration: 1,
-              delay: 0.3,
+              duration: 0.2,
+            //   delay: 0.1,
               x: 0,
               opacity: 1,
               stagger: {
-                each:0.3,
+                // each:0.1,
                 // amount: 0.1,
                 from: "start" 
               },
               scrollTrigger: {
                 trigger: ".orchestringWrappeer", 
-                start: "top bottom", 
-                end: "bottom "
+                start: "top 80%", 
+                end: "bottom 20%", 
+                // markers:true
               }
             });
             

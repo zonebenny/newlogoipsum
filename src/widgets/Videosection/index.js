@@ -48,7 +48,7 @@ const Videosection = () => {
 
       growTl.to("#grow", {
         duration: 1,
-        scale: 1.16,
+        scale: 1.05,
       });
     }
   }, []);

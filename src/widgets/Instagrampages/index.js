@@ -19,8 +19,8 @@ const Instagrampages = () => {
     });
   
     gsap.to(".instaImg", {
-      duration: 1,
-      delay: 1,
+      duration: 0.3,
+      // delay: 1,
       x: 0,
       opacity: 1,
       // each:1,

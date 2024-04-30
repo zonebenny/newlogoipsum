@@ -23,8 +23,8 @@ const ContactForm = () => {
     });
         
     gsap.to(".formImg", {
-      duration: 1,
-      delay: 0.5,
+      duration: 0.3,
+      // delay: 0.5,
       x: 0,
       opacity: 1,
       stagger: {
@@ -33,14 +33,14 @@ const ContactForm = () => {
       },
       scrollTrigger: {
         trigger: ".contactWrapper", 
-        start: "top bottom", 
-        end: "bottom top"
+        start: "top 80%", 
+        end: "bottom 20%", 
       }
     });
     
     gsap.to(".formTitle", {
-      duration: 1,
-      delay: 1.5,
+      duration: 0.3,
+      // delay: 1.5,
       x: 0,
       opacity: 1,
       stagger: {
@@ -49,8 +49,8 @@ const ContactForm = () => {
       },
       scrollTrigger: {
         trigger: ".contactWrapper", 
-        start: "top bottom", 
-        end: "bottom "
+        start: "top 80%", 
+        end: "bottom 20%", 
       }
     });
   }, []);
