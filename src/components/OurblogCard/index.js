@@ -19,7 +19,7 @@ const OurblogCard = () => {
        <div key={index} className='max-w-[435px] w-full blogImgWrap '>
       
            <figure className='relative pb-[70.28%] overflow-hidden rounded-lg  '>
-             <Image src={item?.image} fill alt="image" className='  object-cover  cursor-pointer blogImg scale-[1.2] blogImgs '/>
+             <Image src={item?.image} fill alt="image" className='  object-cover  cursor-pointer blogImg scale-[1.2] blogImgs ' />
            </figure>
         
         

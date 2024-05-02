@@ -55,7 +55,7 @@ const Orchestrating = () => {
                         <div key={index} className="relative overflow-hidden max-w-[657px] group w-full rounded-lg figure-wrapper group transition-all duration-1000 ease-in-out  bgColorWrap cursor-pointer  workimgBlock celebWrap">
                            <div className="hoverBg">
                             <figure className="pb-[104.72%]">
-                                <Image className="group-hover:scale-105 transition-all duration-1000 ease-in-out workImg " src={ele?.image} fill alt={ele?.alt}/>
+                                <Image className="group-hover:scale-105 transition-all duration-1000 ease-in-out workImg " src={ele?.image} fill alt={ele?.alt} />
                             </figure>
                           
                             <div className="absolute bottom-4 left-3 lg:left-14 mt-3 mx-auto mb-6 block h-[77%]  lg:h-[23%] z-10 ">

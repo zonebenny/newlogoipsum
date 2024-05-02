@@ -10,7 +10,7 @@ import "./style.css"
 
 const AchivementSection = () => {
   useLayoutEffect(() => {
- 
+    
       gsap.fromTo(
         ".cardWrap:not(:first-child)",
         {
@@ -39,7 +39,7 @@ const AchivementSection = () => {
         <div className='cardWrap border-2 border-custom-wheat-color border-opacity-50  p-6 2xl:py-[41px] 2xl:px-[38px] max-w-[341px] w-full ' key={index}>
           <div className='max-w-[172px] w-full mb-10 m-auto'>
             <figure className='relative pb-[100%] '>
-              <Image src={item?.image} alt="sdsdsds" fill  className='awardImages'/>
+              <Image src={item?.image} alt="sdsdsds" fill  className='awardImages' />
             </figure>
           </div>
           <span className='block text-lg xl:text-xl font-medium leading-5 text-center text-custom-line-bgcolor opacity-80'>{item?.description}</span>

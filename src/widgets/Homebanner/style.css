@@ -126,6 +126,29 @@
   height: 100%;
 } */
 
+
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  /* position: absolute; */
+  opacity: 0;
+}
+
+.img-container:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background:#ee9172;
+}
+
     
 
 

@@ -64,7 +64,7 @@ const Harmonise = () => {
                 <div className='block lg:flex  gap-[50px] 2xl:gap-[105px]  py-6 md:py-[50px] 2xl:py-[150px] harmoniseImgBlock '>
                     <div className='lg:max-w-[536px] w-full featured-img '>
                         <figure className="relative pb-[109%] lg:pb-[131.346%] overflow-hidden rounded-lg">
-                            <Image className='harmoniseImg scale-[1.2]' src="/harmoniseimg.png" fill alt='sec img'  />
+                            <Image className='harmoniseImg scale-[1.2] object-cover' src="/harmoniseimg.png" fill alt='sec img'/>
                         </figure>
                     </div>
                     <div className=' flex flex-col justify-center pt-8 lg:pt-0 '>
