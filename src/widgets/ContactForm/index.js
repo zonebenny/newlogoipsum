@@ -17,42 +17,46 @@ const ContactForm = () => {
   };
 
   useLayoutEffect(() => {
-    gsap.set([".formImg", ".formTitle"], {
-      x: -50,
-      opacity: 0
-    });
-        
-    gsap.to(".formImg", {
-      duration: 0.3,
-      // delay: 0.5,
-      x: 0,
-      opacity: 1,
-      stagger: {
-        amount: 0.1,
-        from: "start" 
-      },
-      scrollTrigger: {
-        trigger: ".contactWrapper", 
-        start: "top 80%", 
-        end: "bottom 20%", 
-      }
-    });
-    
-    gsap.to(".formTitle", {
-      duration: 0.3,
-      // delay: 1.5,
-      x: 0,
-      opacity: 1,
-      stagger: {
-        amount: 0.1,
-        from: "start" 
-      },
-      scrollTrigger: {
-        trigger: ".contactWrapper", 
-        start: "top 80%", 
-        end: "bottom 20%", 
-      }
-    });
+    if (window.innerWidth > 1024) {
+
+      gsap.set([".formImg", ".formTitle"], {
+        x: -50,
+        opacity: 0
+      });
+          
+      gsap.to(".formImg", {
+        duration: 0.3,
+        // delay: 0.5,
+        x: 0,
+        opacity: 1,
+        stagger: {
+          amount: 0.1,
+          from: "start" 
+        },
+        scrollTrigger: {
+          trigger: ".contactWrapper", 
+          start: "top 80%", 
+          end: "bottom 20%", 
+        }
+      });
+      
+      gsap.to(".formTitle", {
+        duration: 0.3,
+        // delay: 1.5,
+        x: 0,
+        opacity: 1,
+        stagger: {
+          amount: 0.1,
+          from: "start" 
+        },
+        scrollTrigger: {
+          trigger: ".contactWrapper", 
+          start: "top 80%", 
+          end: "bottom 20%", 
+        }
+      });
+     }
+
   }, []);
   
 

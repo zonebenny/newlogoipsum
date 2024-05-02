@@ -1,5 +1,5 @@
 "use client"
-import React, {  useLayoutEffect } from 'react';
+import React, { useLayoutEffect } from 'react';
 import Image from 'next/image';
 import { pagedata } from '@/app/data';
 import Button from '@/components/Button';
@@ -10,85 +10,78 @@ import "./style.css";
 
 const Harmonise = () => {
   useLayoutEffect(() => {
-  
-        const tl = gsap.timeline({
-            scrollTrigger: {
-            //   scrub: 3,
-              trigger: ".harmoniseImgBlock",
-              start: "top center",
-              end: "bottom ",
-              scrub:3
-            //   once: true,
-              
-            },
-          });
-          
-          tl.fromTo(".harmoniseImg", {
-            y: -30,
-            ease: 'none'
-          }, {
-            y: 30,
-            ease: 'none',
-            duration:1
-          });
+    if (window.innerWidth > 1024) { 
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".harmoniseImgBlock",
+          start: "top center",
+          end: "bottom ",
+          scrub: 3
+        },
+      });
+      
+      tl.fromTo(".harmoniseImg", {
+        y: -30,
+        ease: 'none'
+      }, {
+        y: 30,
+        ease: 'none',
+        duration:1
+      });
 
-          gsap.set(".harmoniseTitle", {
-            x: -50, 
-            opacity: 0
-          });
-        
-          gsap.to(".harmoniseTitle", {
-            duration: 1,
-            delay: 0.2,
-            x: 0,
-            opacity: 1,
-            stagger: {
-              // amount: 0.1,
-              from: "start" 
-            },
-            scrollTrigger: {
-              trigger: ".harmonisewrap", 
-              start: "top bottom", 
-              end: "+=500", 
-          
-            }
-          });
-      }, 
+      gsap.set(".harmoniseTitle", {
+        x: -50, 
+        opacity: 0
+      });
     
-      []);
+      gsap.to(".harmoniseTitle", {
+        duration: 1,
+        delay: 0.2,
+        x: 0,
+        opacity: 1,
+        stagger: {
+          from: "start" 
+        },
+        scrollTrigger: {
+          trigger: ".harmonisewrap", 
+          start: "top bottom", 
+          end: "+=500"
+        }
+      });
+    }
+  }, []);
 
- 
-    return (
-        <section className='harmonisewrap'>
-            <div className='container'>
-                <div className='block lg:flex  gap-[50px] 2xl:gap-[105px]  py-6 md:py-[50px] 2xl:py-[150px] harmoniseImgBlock '>
-                    <div className='lg:max-w-[536px] w-full featured-img '>
-                        <figure className="relative pb-[109%] lg:pb-[131.346%] overflow-hidden rounded-lg">
-                            <Image className='harmoniseImg scale-[1.2] object-cover' src="/harmoniseimg.png" fill alt='sec img'/>
-                        </figure>
-                    </div>
-                    <div className=' flex flex-col justify-center pt-8 lg:pt-0 '>
-                        <h2  className='text-3xl md:text-4xl  xl:text-[59px] font-cormorantFont font-normal  xl:leading-[60px] text-custom-black pb-[20px] 2xl:pb-[50px] harmoniseTitle'>{pagedata?.harmonisearea?.title}</h2>
-                        <div className='harmoniseTitle'>
-
-                        <Button href={pagedata?.harmonisearea?.about_us_btn?.url} variant="btnPrimary" outline="outline-Secondary" name={pagedata?.harmonisearea?.about_us_btn?.text} />
-                        </div>
-                        <div className='flex flex-wrap 2xl:flex-nowrap gap-5 2xl:gap-0 md:justify-evenly 2xl:justify-between pt-[20px] 2xl:pt-[80px]'>
-                            {pagedata?.harmonisearea?.content?.map((item, index) => (
-                                <div key={index} className='py-6'>
-                                    <span className='block text-[45px] xl:text-[80px] text-custom-counter-color leading-[45px] xl:leading-[93px] font-light font-workSans'>{item.title}+</span>
-                                    <span className='block text-base xl:text-[18px] text-custom-counter-textcolor leading-4 xl:leading-[20px] font-normal font-workSans'>{item?.description}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
+  return (
+    <section className='harmonisewrap'>
+      <div className='container'>
+        <div className='block lg:flex gap-[50px] 2xl:gap-[105px] py-6 md:py-[50px] 2xl:py-[150px] harmoniseImgBlock'>
+          <div className='lg:max-w-[536px] w-full featured-img'>
+            <figure className="relative pb-[109%] lg:pb-[131.346%] overflow-hidden rounded-lg">
+              <Image className='harmoniseImg lg:scale-[1.2] object-cover' src="/harmoniseimg.png" fill alt='sec img'/>
+            </figure>
+          </div>
+          <div className='flex flex-col justify-center pt-8 lg:pt-0 '>
+            <h2 className='text-3xl md:text-4xl xl:text-[59px] font-cormorantFont font-normal xl:leading-[60px] text-custom-black pb-[20px] 2xl:pb-[50px] harmoniseTitle'>{pagedata?.harmonisearea?.title}</h2>
+            <div className='harmoniseTitle'>
+              <Button href={pagedata?.harmonisearea?.about_us_btn?.url} variant="btnPrimary" outline="outline-Secondary" name={pagedata?.harmonisearea?.about_us_btn?.text} />
             </div>
-        </section>
-    );
+            <div className='flex flex-wrap 2xl:flex-nowrap gap-5 2xl:gap-0 md:justify-evenly 2xl:justify-between pt-[20px] 2xl:pt-[80px]'>
+              {pagedata?.harmonisearea?.content?.map((item, index) => (
+                <div key={index} className='py-6'>
+                  <span className='block text-[45px] xl:text-[80px] text-custom-counter-color leading-[45px] xl:leading-[93px] font-light font-workSans'>{item.title}+</span>
+                  <span className='block text-base xl:text-[18px] text-custom-counter-textcolor leading-4 xl:leading-[20px] font-normal font-workSans'>{item?.description}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Harmonise;
+
 
 // "use client"
 // import React, { useState, useEffect } from 'react';

@@ -16,7 +16,7 @@ const Footer = () => {
         </div>
         <div className='py-10 '>
           <div className='flex flex-wrap 2xl:flex-nowrap justify-between   '>{FooterData?.policyarea?.links.map((ele, inde) => (
-            <Link className='py-5 2xl:py-0 text-custom-white opacity-60 hover:opacity-100 duration-500 transition-all' href={'#'} key={inde}>{ele?.title}</Link>
+            <Link className='py-2 2xl:py-0 text-custom-white opacity-60 hover:opacity-100 duration-500 transition-all' href={'#'} key={inde}>{ele?.title}</Link>
           ))}</div>
         </div>
       </div>

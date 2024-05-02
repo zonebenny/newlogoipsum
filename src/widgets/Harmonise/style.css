@@ -46,3 +46,7 @@
     border-bottom-right-radius: 3%;
   }
 }
+
+.blur-word{
+  filter: blur(20px);
+}

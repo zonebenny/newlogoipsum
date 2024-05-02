@@ -42,7 +42,7 @@ const FooterLinks = () => {
             <span className="block text-custom-white opacity-75">{FooterData?.address?.line2}</span>
             <span className="block text-custom-white opacity-75">{FooterData?.address?.line3}</span>
           </div>
-          <div className="mb-[93px] ">
+          <div className="mb-[40px] xl:mb-[93px] ">
             <Link href="/" className="block text-custom-white opacity-75 hover:opacity-100 duration-500 transition-all" >{FooterData?.contact?.phone?.text}</Link>
             <Link href={'FooterData.contact.email.link'}><span className="block text-custom-white opacity-75 hover:opacity-100 duration-500 transition-all">{FooterData?.contact?.email?.text}</span></Link>
           </div>
