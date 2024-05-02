@@ -66,7 +66,7 @@ const ContactForm = () => {
         <div className='flex flex-wrap xl:flex-nowrap gap-[50px] xl:gap-[112px] justify-center'>
           <div className='lg:max-w-[578px] w-full  rounded-lg wrap-image'>
             <figure className='relative pb-[131.198%]'>
-              <Image src='/contactimg.png' className='formImg ' alt='contactimg' fill  />
+              <Image src='/contactimg.png' className='formImg object-cover ' alt='contactimg ' fill  />
             </figure>
           </div>
           <div id='contactForm' className='max-w-[675px]'>

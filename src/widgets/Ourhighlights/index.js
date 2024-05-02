@@ -26,7 +26,7 @@ const Ourhighlights = () => {
   }, []);
 
   return (
-    <section className="max-w-[1526px] m-auto px-3 py-[40px] 2xl:py-[150px] ml-0 2xl:ml-[257px]">
+    <section className="max-w-[1526px] m-auto px-3 py-[40px] 2xl:py-[150px] ml-0 2xl:ml-[157px]">
       <div className=" flex flex-wrap md:flex-nowrap md:gap-[50px] md:justify-evenly 2xl:gap-[150px] items-center">
 
         <div>

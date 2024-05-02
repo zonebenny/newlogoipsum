@@ -18,7 +18,7 @@ const Homebanner = () => {
 
       tl
         .to(rule, { duration: 1, width: "100%", ease: "Power2.ease" })
-        .set(rule, { duration: 0, right: 0, left: "unset" })
+        .set(rule, { duration: 0.5, right: 0, left: "unset" })
         .to(rule, { duration: 1, width: "0%", ease: "Power2.ease" })
         .to("img", { duration: 0.2, opacity: 1, delay: -1 })
         .from(".img-container img", { duration: 1, scale: 1.4, ease: "Power2.easeInOut", delay: -1.2 });

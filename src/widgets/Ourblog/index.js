@@ -9,8 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Ourblog = () => {
   useLayoutEffect(() => {
-    // Check if the animation should be applied based on desktop screen width
-    if (window.innerWidth > 1024) { // Adjust as per your requirement
+
+    if (window.innerWidth > 1024) { 
       gsap.set(".blogImgWrap", {
         x: -50,
         opacity: 0
