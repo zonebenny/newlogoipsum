@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 import Header from "@/components/Header";
 import { Cormorant_Garamond, Work_Sans } from "next/font/google";
+// import GlobalProviders from "@/components/GlobalProviders";
 
 
 const cormorant_garamond = Cormorant_Garamond({
@@ -38,10 +39,12 @@ export default function RootLayout({ children }) {
       <link rel="icon" href="./favicon.ico" sizes="any" />
       <body className={work_sans.className}>
         <Header />
+        {/* <GlobalProviders> */}
 
         {children}
+        {/* </GlobalProviders> */}
 
-        <Footer></Footer>
+        <Footer/>
       </body>
     </html>
   );

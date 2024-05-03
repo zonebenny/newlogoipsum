@@ -1,6 +1,6 @@
 
   /* Keyframes */
-  @keyframes wiggle {
+  /* @keyframes wiggle {
     0%, 7% {
       transform: rotateZ(0);
     }
@@ -45,4 +45,4 @@
         background-color: #f1774e;
         border-top: 5px solid #817f7f;
         animation: wiggle 2s linear infinite;
-  }
+  } */

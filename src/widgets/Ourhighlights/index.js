@@ -60,6 +60,7 @@ const Ourhighlights = () => {
 
         <div id="default-tab-content" className="md:max-w-[300px] xl:max-w-[674px] w-full">
           {pagedata?.ourhighlight?.tabs?.map((tab) => (
+            
             <figure
               className={`${activeTab === tab.id ? "block" : "hidden"} relative pb-[100%]`}
               id={tab?.id}
@@ -67,7 +68,7 @@ const Ourhighlights = () => {
               aria-labelledby={`${tab?.id}-tab`}
               key={tab?.id}
             >
-              <Image src={tab?.image} fill alt={tab?.label} />
+              <Image src={tab?.image} fill alt={tab?.label} className="object-contain"/>
             </figure>
           ))}
         </div>

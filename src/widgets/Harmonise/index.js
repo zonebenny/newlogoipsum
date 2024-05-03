@@ -26,7 +26,7 @@ const Harmonise = () => {
       }, {
         y: 30,
         ease: 'none',
-        duration:1
+        duration:0.3
       });
 
       gsap.set(".harmoniseTitle", {
@@ -48,6 +48,7 @@ const Harmonise = () => {
           end: "+=500"
         }
       });
+      
     }
   }, []);
 

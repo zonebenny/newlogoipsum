@@ -13,11 +13,11 @@ const Videosection = () => {
   const togglePlayPause = () => {
     if (window.innerWidth <= 1024) { 
       const video = videoRef.current;
-      if (video.paused) {
-        video.play();
+      if (video?.paused) {
+        video?.play();
         setIsPlaying(true);
       } else {
-        video.pause();
+        video?.pause();
         setIsPlaying(false);
       }
     }

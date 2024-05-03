@@ -1,5 +1,5 @@
 "use client"
-import React, { useLayoutEffect } from 'react';
+import React, {useLayoutEffect} from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
@@ -11,25 +11,25 @@ gsap.registerPlugin(ScrollTrigger);
 const Homebanner = () => {
 
   useLayoutEffect(() => {
-    
-      const tl = gsap.timeline();
+    const tl = gsap.timeline();
+    const rule = CSSRulePlugin.getRule('.img-container:after');
+    const img = '.img-container img';
 
-      const rule = CSSRulePlugin.getRule(".img-container:after");
-
-      tl
-        .to(rule, { duration: 1, width: "100%", ease: "Power2.ease" })
-        .set(rule, { duration: 0.5, right: 0, left: "unset" })
-        .to(rule, { duration: 1, width: "0%", ease: "Power2.ease" })
-        .to("img", { duration: 0.2, opacity: 1, delay: -1 })
-        .from(".img-container img", { duration: 1, scale: 1.4, ease: "Power2.easeInOut", delay: -1.2 });
-    }
-  , []);
+    tl.to(rule, { duration: 1, width: '100%', ease: 'Power2.ease' })
+      .set(rule, { duration: 0.5, right: 0 })
+      .to(rule, { duration: 1, width: '0%', ease: 'Power2.ease' })
+      .to(img, { duration: 0.2, opacity: 1, delay: -1 })
+      .from(img, { duration: 1, scale: 1.4, ease: 'Power2.easeInOut', delay: -1.2 });
+    return () => {
+      tl.kill(); 
+    };
+  }, []);
 
   return (
     <section className=' relative bannerWrapper'>
       <div className='w-full  '>
         <figure className='relative pb-[52.165%]  overflow-hidden img-container'>
-          <Image src="/bannerimages.png" fill alt='homebanner' className='bannerImg scale-[1.2] object-cover' loading="eager" priority={true} quality={100} sizes='100vw' />
+          <Image src="/bannerimages.png" fill alt='homebanner' className='bannerImg scale-[1.2] object-cover' loading="eager" priority={true} quality={100} sizes='100vw'  />
         </figure>
       </div>
     </section>

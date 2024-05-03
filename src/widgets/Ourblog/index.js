@@ -11,6 +11,7 @@ const Ourblog = () => {
   useLayoutEffect(() => {
 
     if (window.innerWidth > 1024) { 
+      
       gsap.set(".blogImgWrap", {
         x: -50,
         opacity: 0

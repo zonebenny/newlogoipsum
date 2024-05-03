@@ -147,7 +147,7 @@ const FormContact = () => {
                     )}
                 </div>
             ))}
-            <Button type="submit" variant="btnPrimary" outline="outline-Secondary" name="Submit" className="buttons" />
+            <Button type="submit" variant="btnPrimary" outline="outline-Secondary" name="Submit"  />
         </form>
     );
 }

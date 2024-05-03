@@ -45,10 +45,10 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
+/* 
 *{
   scroll-behavior: smooth;
-}
+} */
 
 
 

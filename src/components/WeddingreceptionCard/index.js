@@ -23,11 +23,11 @@ const WeddingreceptionCard = () => {
       
       tl.fromTo(".recImg", {
         y: -30,
-        ease: 'none'
+        // ease: 'none'
       }, {
         y: 30,
-        ease: 'none',
-        duration: 1
+        // ease: 'none',
+        duration: 0.2,
       });
     }
   }, []);
