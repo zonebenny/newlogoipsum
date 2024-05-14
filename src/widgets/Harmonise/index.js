@@ -164,32 +164,33 @@ const Harmonise = () => {
       });
 
       // Counter animation
-      const counters = document.querySelectorAll('.counter');
-      counters.forEach(counter => {
-        gsap.fromTo(counter, {
-          innerText: 0
-        }, {
-          innerText: counter.getAttribute('data-target'),
-          duration: 2,
-          scrollTrigger: {
-            trigger: counter,
-            start: "top bottom",
-            onEnter: () => {
-              const endVal = parseInt(counter.getAttribute('data-target'), 10);
-              gsap.to(counter, {
-                duration: 2,
-                innerText: endVal,
-                snap: { innerText: 1 },
-                ease: 'none',
-                onUpdate: () => {
-                  counter.innerText = Math.ceil(counter.innerText) + '+';
-                }
-              });
-            }
-          }
-        });
-      });
     }
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+      gsap.fromTo(counter, {
+        innerText: 0
+      }, {
+        innerText: counter.getAttribute('data-target'),
+        duration: 2,
+        scrollTrigger: {
+          trigger: counter,
+          start: "top bottom",
+          onEnter: () => {
+            const endVal = parseInt(counter.getAttribute('data-target'), 10);
+            gsap.to(counter, {
+              duration: 2,
+              innerText: endVal,
+              snap: { innerText: 1 },
+              ease: 'none',
+              onUpdate: () => {
+                counter.innerText = Math.ceil(counter.innerText) + '+';
+              }
+            });
+          }
+        }
+      });
+    });
+
   }, []);
 
   return (
