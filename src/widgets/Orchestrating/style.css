@@ -53,6 +53,53 @@
 }
 
 
+/* -***************************** */
+
+.scrollWrapper{
+    display: flex;
+    /* height: 100vh; */
+    /* align-items: flex-end; */
+    justify-content: center;
+    /* margin-bottom: 100vh; */
+    /* color: rgb(182, 177, 177); */
+    
+}
+
+.scrollContent{
+    /* width: 90%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.scrollContent p{
+    font-size: 50px;
+    margin: 0px;
+    /* margin-right: 1.5vw; */
+    font-weight: 400;
+    line-height:55px;
+    font-family:"var(--ff-cormorant-garamond)";
+    text-align: center;
+    
+}
+@media (max-width: 768px) {
+    .scrollContent p{
+        font-size: 30px;
+        line-height: 40px
+    }
+}
+@media (max-width:575px) {
+    .scrollContent p{
+        font-size: 26px;
+        line-height: 30px
+    }
+}
+
+
+.scrollContent span{
+    opacity: 0.2;
+}
+
   
   
   

@@ -35,7 +35,6 @@ const FooterLinks = () => {
         ))}
 
         {/* ******************************** */}
-
         <div className="block font-workSans">
           <div className="mb-7 ">
             <span className="block text-custom-white opacity-75">{FooterData?.address?.line1}</span>
@@ -62,7 +61,6 @@ const FooterLinks = () => {
         </div>
       </div>
       {/* ******************************** */}
-
     </div>
   );
 };

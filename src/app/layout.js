@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { Cormorant_Garamond, Work_Sans } from "next/font/google";
 // import GlobalProviders from "@/components/GlobalProviders";
+import CustomCursor from '@/components/custom-cursor'
 
 
 const cormorant_garamond = Cormorant_Garamond({
@@ -40,8 +41,9 @@ export default function RootLayout({ children }) {
       <body className={work_sans.className}>
         <Header />
         {/* <GlobalProviders> */}
-
-        {children}
+        <CustomCursor/> 
+        {children}  
+    
         {/* </GlobalProviders> */}
 
         <Footer/>

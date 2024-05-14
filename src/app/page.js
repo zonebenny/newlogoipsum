@@ -1,3 +1,4 @@
+
 import Awardsection from "@/widgets/Awardsection";
 import ContactForm from "@/widgets/ContactForm";
 import Harmonise from "@/widgets/Harmonise";
@@ -9,13 +10,16 @@ import Ourhighlights from "@/widgets/Ourhighlights";
 import Reviewsection from "@/widgets/Reviewsection";
 import Videosection from "@/widgets/Videosection";
 import WeddingReception from "@/widgets/WeddingReception";
+
 // import BannerWord from "@/widgets/bannerWord";
 // import Homebansample from "@/widgets/homebansample";
 
 
 export default function Home() {
+
+
   return (
-    <main>
+    <main  >
  
       <Homebanner></Homebanner>
       <Harmonise></Harmonise>
@@ -28,6 +32,10 @@ export default function Home() {
       <Ourblog></Ourblog>
       <Instagrampages></Instagrampages>
       <ContactForm></ContactForm>
+
+  
+
+ 
     </main>
   );
 }

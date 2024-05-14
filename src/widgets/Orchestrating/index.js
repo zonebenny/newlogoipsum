@@ -8,7 +8,56 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
+
+import { useRef, useEffect } from 'react';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+
+const phrase = "ORCHESTRATING WEDDING CELEBRATIONS";
+
+
 const Orchestrating = () => {
+
+    let refs = useRef([]);
+    const body = useRef(null);
+    const containers = useRef(null);
+  
+    useEffect( () => {
+      gsap.registerPlugin(ScrollTrigger);
+      createAnimation();
+    }, [])
+  
+    const createAnimation = () => {
+        gsap.to(refs.current, {
+          scrollTrigger: {
+              trigger: containers.current,
+              scrub: true,
+              start: `top 80%`,
+              // end: `+=${window.innerHeight / 1.5}`,
+              end: "bottom 50%",
+            
+              
+          },
+          opacity: 1,
+          ease: "none",
+          stagger:0.9,
+          
+      })
+    }
+    const splitLetters = (word) => {
+      return word.split("").map((letter, index) => (
+          <span key={letter + "_" + index} ref={element =>{refs.current.push(element)}}>{letter}</span>
+      ));
+  };
+  
+  const splitWords = (phrase) => {
+      return phrase.split(" ").map((word, index) => {
+          const letters = splitLetters(word);
+          return <p key={word + "_" + index}>{letters}</p>;
+      });
+  };
+  
+
     useLayoutEffect(() => {
         
         if (window.innerWidth >1024) {
@@ -46,9 +95,16 @@ const Orchestrating = () => {
         <section className="py-[50px] 2xl:py-[120px] orchestringWrappeer">
             <div className="container">
                 <div className="sm:px-[120px] lg:px-[175px] mb-[40px] 2xl:mb-[90px]">
-                    <h3 className="font-cormorantFont text-custom-black text-3xl md:text-4xl 2xl:text-[50px] leading-[35px] 2xl:leading-[60px] font-normal text-center ">
+                    {/* <h3 className="font-cormorantFont text-custom-black text-3xl md:text-4xl 2xl:text-[50px] leading-[35px] 2xl:leading-[60px] font-normal text-center ">
                         {pagedata?.orchestrating?.title}
-                    </h3>
+                    </h3> */}
+                <div ref={containers} className="scrollWrapper">
+                  <div ref={body} className="scrollContent">
+                    {
+                      splitWords(phrase)
+                    }
+                  </div>
+              </div>
                 </div>
                 <div className="flex flex-wrap gap-[50px] justify-center xl:justify-start ">
                     {pagedata?.orchestrating?.subcontent?.map((ele, index) => (
