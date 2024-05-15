@@ -34,7 +34,7 @@ const CustomCursor = () => {
    
         style={{ top: position.y, left: position.x }}
         ref={cursorRef}
-        className={`fixed pointer-events-none transition-all -translate-x-1/2 -translate-y-1/2 z-50 ease-linear duration-0 rounded-full w-3 h-3 bg-[#e75f31] `}>
+        className={`fixed pointer-events-none transition-all -translate-x-1/2 -translate-y-1/2 z-50 ease-linear duration-0 rounded-full w-4 h-4 bg-[#e75f31] mix-blend-difference `}>
     
 
     </div>
